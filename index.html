@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <title>Anime Scene Gallery</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .button {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        color: rgb(212 212 216);
+        border: none;
+        border-radius: 50px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: none;
+        transition: transform 0.2s, box-shadow 0.3s;
+      }
+
+      .button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px black;
+      }
+
+      .icon {
+        margin-right: 8px;
+      }
+
+      .github-button {
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .instagram-button {
+        bottom: 80px;
+        right: 20px;
+      }
+
+      .linkedin-button {
+        bottom: 140px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- GitHub Button -->
+    <button class="button github-button" onclick="redirectToGithub()">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+      </svg>
+      GitHub Profile
+    </button>
+
+    <!-- Instagram Button -->
+    <button class="button instagram-button" onclick="redirectToInstagram()">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.346 3.608 1.321.975.975 1.26 2.242 1.321 3.608.059 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.346 2.633-1.321 3.608-.975.975-2.242 1.26-3.608 1.321-1.266.059-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.346-3.608-1.321-.975-.975-1.26-2.242-1.321-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.346-2.633 1.321-3.608.975-.975 2.242-1.26 3.608-1.321C8.416 2.175 8.796 2.163 12 2.163M12 0C8.741 0 8.332.013 7.053.072 5.77.131 4.584.348 3.512 1.42c-1.072 1.072-1.289 2.258-1.348 3.541C2.013 8.332 2 8.741 2 12c0 3.259.013 3.668.072 4.947.059 1.283.276 2.469 1.348 3.541 1.072 1.072 2.258 1.289 3.541 1.348C8.332 21.987 8.741 22 12 22c3.259 0 3.668-.013 4.947-.072 1.283-.059 2.469-.276 3.541-1.348 1.072-1.072 1.289-2.258 1.348-3.541.059-1.279.072-1.688.072-4.947 0-3.259-.013-3.668-.072-4.947-.059-1.283-.276-2.469-1.348-3.541C19.416.348 18.23.131 16.947.072 15.668.013 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162S8.597 18.162 12 18.162 18.162 15.403 18.162 12 15.403 5.838 12 5.838zm0 10.324c-2.298 0-4.162-1.864-4.162-4.162S9.702 7.838 12 7.838 16.162 9.702 16.162 12 14.298 16.162 12 16.162zm4.406-10.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z" />
+      </svg>
+      Instagram
+    </button>
+
+    <!-- LinkedIn Button -->
+    <button class="button linkedin-button" onclick="redirectToLinkedin()">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.451 20.452H17.3v-5.368c0-1.281-.025-2.932-1.786-2.932-1.786 0-2.06 1.394-2.06 2.836v5.464H10.3V9h3.012v1.561h.042c.42-.797 1.444-1.637 2.974-1.637 3.179 0 3.765 2.093 3.765 4.816v6.712zM6.337 7.433a1.744 1.744 0 01-1.744-1.744 1.743 1.743 0 013.487 0 1.743 1.743 0 01-1.743 1.744zM7.8 20.452H4.869V9H7.8v11.452zM22.223 0H1.767C.79 0 0 .771 0 1.729v20.542C0 23.228.79 24 1.767 24h20.456C23.211 24 24 23.229 24 22.271V1.729C24 .771 23.211 0 22.223 0z" />
+      </svg>
+      LinkedIn
+    </button>
+
+    <script>
+      function redirectToGithub() {
+        window.open('https://github.com/Priyanshu84iya', '_blank');
+      }
+
+      function redirectToInstagram() {
+        window.open('https://instagram.com/pry_uchiha', '_blank');
+      }
+
+      function redirectToLinkedin() {
+        window.open('https://www.linkedin.com/in/priyanshu-chaurasiya-8986a833b/', '_blank');
+      }
+    </script>
+  </body>
+</html>
